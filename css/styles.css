@@ -1,4 +1,5 @@
 body{
+    background-color: rgb(224, 224, 224);
     margin: 0;
     padding: 0;
 }
@@ -90,7 +91,7 @@ span.line {
     opacity: 1;
     position: fixed;
     width: 100%;
-
+    z-index: 5;
 }
 
 .top-bar {
@@ -237,54 +238,336 @@ section.picture-grid {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
     gap: 12px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .picture-grid .left {
+    padding: 16px;
     grid-row: 1 / 7;
     grid-column: 1;
     background: url('../img/coffee3.jpg') no-repeat;
     background-size: cover;
     height: 90vh;
     background-position: center;
+    color: white;
+    position: relative;
+    
+}
+
+.left #caption {
+    position: absolute;
+    bottom: 44%;
+    left: 4%
 }
 
 .picture-grid .middle-top {
+    padding: 12px;
     grid-row: 1 / 4;
     grid-column: 2;
     background: url('../img/tea4.jpg') no-repeat;
     opacity: 1;
     background-size: cover;
-    background-position: center;
+    background-position: bottom;
+    position: relative;
+    color: white;
+}
+
+.middle-top #title {
+    position: absolute;
+    top: 49%;
+    left: 3%;
+}
+
+.middle-top #caption {
+    color: rgb(255, 255, 255);
+    position: absolute;
+    left: 8%;
+    bottom: 17%;
 }
 
 .picture-grid .middle-bottom {
+    padding: 12px;
+    color: white;
     grid-row: 4 / 7;
     grid-column: 2;
     background: url('../img/tea7.jpg') no-repeat;
     background-size: cover;
+    position: relative;
+}
+
+.middle-bottom #caption {
+    position: absolute;
+    bottom: 15%;
+    left: 12%;
 }
 
 .picture-grid .right-top {
+    padding: 0 12px;
+    color: white;
     grid-row: 1 / 3;
     grid-column: 3;
     background: url('../img/coffee2.jpg') no-repeat;
     background-size: cover;
     background-position: center;
+    position: relative;
+}
+
+.right-top #caption {
+    position: absolute;
+    bottom: -8%;
+    right: 1%;
 }
 
 .picture-grid .right-middle {
+    padding: 4px 2px;
+    color: white;
     grid-row: 3 / 5;
     grid-column: 3;
     background: url('../img/tea5.jpg') no-repeat;
     background-size: cover;
+    position: relative;
+}
+
+.right-middle #caption {
+    position: absolute;
+    bottom: 25%;
+    right: 5%;
 }
 
 .picture-grid .right-bottom {
+    padding: 12px;
+    color: white;
     grid-row: 5 / 7;
     grid-column: 3;
     background: url('../img/tea6.jpg') no-repeat;
     background-size: cover;
     background-position: center;
+    position: relative;
+}
+
+.right-bottom #caption {
+    position: absolute;
+    bottom: 9%;
+    left: 5%;
+}
+
+section.plans {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 100;
+    margin: 0 auto;
+    max-width: 980px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 24px;
+    text-align: center;
+    color: rgb(63, 63, 63);
+    transition: ease-in 1s all;
+}
+
+
+section.plans #select {
+    margin: 0;
+    grid-row: 1;
+    grid-column: 1 / 3;
+}
+
+section.plans #description {
+    margin: -48px 0 0;
+    grid-row: 2;
+    grid-column: 1 / 3;
+}
+
+section.plans .low-tier {
+    background-color: white;
+    margin: 0 0;
+    grid-column: 1;
+    grid-row: 3;
+    box-shadow: 2px 2px 2px rgb(214, 214, 214), -2px 2px 2px rgb(214, 214, 214);
+    border-radius: 4px;
+    transition: ease-out .5s all;
+    overflow: hidden;
+    max-height: 570px;
+}
+
+.low-tier:hover {
+    padding: 12px 0 0;
+    border-width: 8px;
+    border-style: solid;
+    border-image: linear-gradient(90deg, rgb(11, 87, 11), rgb(52, 207, 52)) 1 10%;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 0;
+    transition: ease-in .5s all;
+}
+
+section.plans .low-tier #brewlu {
+    margin: 12px 0;
+    font-family: 'Comfortaa', sans-serif;
+    font-weight: 700;
+    font-size: 1.4em;
+}
+
+section.plans .low-tier #description {
+    margin: 0;
+}
+
+.price {
+    margin: -18px 0 0;
+    display: flex;
+    flex-basis: 100%;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: center;
+    font-size: 2em;
+}
+
+section.plans .low-tier .low-tier-button #text {
+    background-color: black;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+    text-decoration: none;
+    font-size: 1.5em;
+    padding: 16px 48px 14px;
+    border-radius: 12px;
+}
+
+.low-tier .checkmarks {
+    margin: 24px 0;
+    padding: 0 24px;
+    background-color: rgb(241, 241, 241);
+    display: grid;
+    font-size: .8em;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: auto auto auto;
+    text-align: left;
+    gap: 0;
+}
+
+.checkmarks #check1 {
+    color: rgb(54, 99, 54);
+    grid-row: 1;
+    grid-column: 1;
+}
+
+.checkmarks #check2 {
+
+    color: rgb(54, 99, 54);
+    grid-row: 2;
+    grid-column: 1;
+}
+
+.checkmarks #check3 {
+    color: rgb(54, 99, 54);
+    grid-row: 3;
+    grid-column: 1;
+}
+
+.checkmarks #check4 {
+    color: rgb(54, 99, 54);
+    grid-row: 4;
+    grid-column: 1;
+}
+
+.checkmarks #check5 {
+    color: rgb(54, 99, 54);
+    grid-row: 5;
+    grid-column: 1;
+}
+
+.checkmarks #pro1 {
+    margin: 0;
+    color: #3b3b3b;
+    grid-row: 1;
+    grid-column: 2;
+}
+
+.checkmarks #pro2 {
+    margin: 0;
+    color: #3b3b3b;
+    grid-row: 2;
+    grid-column: 2;
+}
+
+.checkmarks #pro3 {
+    margin: 0;
+    color: #3b3b3b;
+    grid-row: 3;
+    grid-column: 2;
+}
+
+.checkmarks #pro4 {
+    margin: 0;
+    color: #3b3b3b;
+    grid-row: 4;
+    grid-column: 2;
+}
+
+.checkmarks #pro5 {
+    margin: 0;
+    color: #3b3b3b;
+    grid-row: 5;
+    grid-column: 2;
+}
+
+section.plans .high-tier {
+    background-color: white;
+    margin: 0 0;
+    grid-column: 2;
+    grid-row: 3;
+    box-shadow: 2px 2px 2px rgb(214, 214, 214), -2px 2px 2px rgb(214, 214, 214);
+    border-radius: 4px;
+    transition: ease-out .5s all;
+    overflow: hidden;
+    max-height: 1020px;
+}
+
+.high-tier:hover {
+    padding: 12px 0 0;
+    border-width: 8px;
+    border-style: solid;
+    border-image: linear-gradient(90deg, rgb(8, 37, 99), rgb(88, 129, 219)) 1 10%;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 0;
+    transition: ease-in .5s all;
+}
+
+section.plans .high-tier #brewlu {
+    margin: 12px 0;
+    font-family: 'Comfortaa', sans-serif;
+    font-weight: 700;
+    font-size: 1.4em;
+}
+
+section.plans .high-tier #description {
+    margin: 0 24px -50px;
+}
+
+section.plans .high-tier #price {
+    margin: 0px 0;
+}
+
+section.plans .high-tier .high-tier-button #text {
+    background-color: black;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+    text-decoration: none;
+    font-size: 1.5em;
+    padding: 16px 48px 14px;
+    border-radius: 12px;
+}
+
+.high-tier .checkmarks {
+    margin: 24px 0;
+    padding: 0 24px;
+    background-color: rgb(241, 241, 241);
+    font-size: .8em;
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: auto auto auto auto auto;
+    text-align: left;
+    gap: 4px;
 }
 
 @media only screen and (max-width: 920px) {
