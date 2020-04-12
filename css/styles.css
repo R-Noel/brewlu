@@ -10,7 +10,7 @@ span.line {
 .intro {
     margin: 0;
     font-family: 'Comfortaa', sans-serif;
-    min-height: 700px;
+    min-height: 650px;
     height: 67vh;
     background-image: linear-gradient(135deg,#231437 0%,#2c385e 50%,#336e6b 100%);
     position: relative;
@@ -18,23 +18,16 @@ span.line {
 }
 
 .container {
-    position: absolute;
-    display: block;
-    opacity: 1;
-    min-height: 550px;
-    height: 52vh;
-    color: #FFF;
-    overflow: hidden;
-    text-align: center;
-}
-
-.container #tea-top {
     width: 100%;
-    min-height: 550px;
-    height: auto;
-    min-height: 52vh;
+    height: 52vh;
+    position: absolute;
     opacity: .3;
-    transform: translate(0%, -45%);
+    min-height: 484px;
+    color: #FFF;
+    text-align: center;
+    background: url('../img/drink2.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 .top-text {
@@ -141,6 +134,159 @@ span.line {
     flex-shrink: 0;
 }
 
+.bundle-ribbon {
+    transform: translate(0%, 496px);
+}
+
+.logos {
+    margin: 0px 20px;
+    order: 1;
+    max-height: 200px;
+    display: grid;
+    grid-template-columns: 8% 8% 8% 0% 50% 0% 10%;
+    grid-template-rows: 44px 44px 44px;
+    text-align: left;
+    gap: 0 2%;
+}
+
+.logos #brewlu {
+    margin: auto 0;
+    grid-row: 2 / 3;
+    color: white;
+    width: 90%;
+    max-width: 90%;
+    font-size: 2.1vw;
+}
+
+.logos #peets {
+    margin: auto 0;
+    grid-row: 1 / 3;
+    width: 90%;
+}
+
+.logos #costa {
+    margin: auto 0;
+    grid-row: 1 / 3;
+    width: 90%;
+}
+
+.logos #bundle-header {
+    margin: -10px 0;
+    grid-row: 1;
+    grid-column: 5;
+    color: aquamarine;
+    font-weight: 800;
+}
+
+.logos #bundle-description {
+    margin: -28px 0;
+    color: white;
+    grid-row: 2;
+    grid-column: 5;
+    font-size: 1.65vw;
+}
+
+.logos #bundle-details {
+    margin: -24px 0;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    grid-row: 3;
+    grid-column: 5;
+    color: white;
+}
+
+.logos #bundle-button {
+    margin: 0;
+    padding: 12px 8px;
+    grid-row: 1/ 2;
+    grid-column: 7;
+    min-width: 88px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 4px;
+    border: solid white 3px;
+}
+
+.logos #bundle-terms {
+    color: white;
+    font-size: 1em;
+    grid-row: 2;
+    grid-column: 7;
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
+}
+
+.logos #short-description {
+    color:transparent;
+    grid-row: 3;
+    grid-column: 1 / 6;
+}
+
+.logos #short-details {
+    color: transparent;
+    font-size: 0;
+}
+
+
+section.picture-grid {
+    padding: 12px 0;
+    margin: 0 auto;
+    background-color: rgb(37, 37, 37);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 12px;
+}
+
+.picture-grid .left {
+    grid-row: 1 / 7;
+    grid-column: 1;
+    background: url('../img/coffee3.jpg') no-repeat;
+    background-size: cover;
+    height: 90vh;
+    background-position: center;
+}
+
+.picture-grid .middle-top {
+    grid-row: 1 / 4;
+    grid-column: 2;
+    background: url('../img/tea4.jpg') no-repeat;
+    opacity: 1;
+    background-size: cover;
+    background-position: center;
+}
+
+.picture-grid .middle-bottom {
+    grid-row: 4 / 7;
+    grid-column: 2;
+    background: url('../img/tea7.jpg') no-repeat;
+    background-size: cover;
+}
+
+.picture-grid .right-top {
+    grid-row: 1 / 3;
+    grid-column: 3;
+    background: url('../img/coffee2.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.picture-grid .right-middle {
+    grid-row: 3 / 5;
+    grid-column: 3;
+    background: url('../img/tea5.jpg') no-repeat;
+    background-size: cover;
+}
+
+.picture-grid .right-bottom {
+    grid-row: 5 / 7;
+    grid-column: 3;
+    background: url('../img/tea6.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
 @media only screen and (max-width: 920px) {
     .intro {
         min-height: 600px;
@@ -148,15 +294,9 @@ span.line {
     }
 
     .container {
-        min-height: 400px;
+        min-height: 440px;
         overflow: hidden;
     }
-
-    .container #tea-top {
-        height: auto;
-        transform: translate(-25%, -32%);
-    }
-
     .top-text #heading {
         font-size: 2.4em;
     }
@@ -172,5 +312,72 @@ span.line {
 
     .top-text #disclaimer {
         margin: 4px 54px;
+    }
+
+    .bundle-ribbon {
+        transform: translate(0, 452px);
+    }
+
+    .logos {
+        max-height: 200px;
+        grid-template-columns: 72px 72px 72px auto;
+        grid-template-rows: 16px 28px 28px;
+        gap: 12px 4px;
+    }
+
+    .logos #brewlu{
+        margin: 14px 0;
+        grid-row: 2;
+        font-size: 1em;
+        text-align: center;
+    }
+
+    .logos #peets {
+        grid-row: 2;
+    }
+
+    .logos #costa {
+        grid-row: 2;
+    }
+
+    .logos #bundle-header {
+        grid-row: 1;
+        grid-column: 1 / 5;
+        white-space: nowrap;    
+    }
+
+    .logos #bundle-description {
+        font-size: 0;
+    }
+
+    .logos #bundle-details {
+        margin: 0;
+        font-size: 0;
+    }
+
+    .logos #bundle-terms {
+        grid-row: 3;
+        margin: 0 auto;
+    }
+
+    .logos #short-description {
+        margin: 11px 0;
+        max-width: auto;
+        color: white;
+    }
+
+    .logos #short-details {
+        font-size: 1em;
+        color: white;
+        text-decoration: underline;
+    }
+
+    .logos #bundle-button {
+        margin: 0 auto;
+        max-width: 120px;
+        grid-row: 1 / 2;
+        grid-column: 7;
+        padding: 20px 0px 36px;
+        text-align: center;
     }
 }
