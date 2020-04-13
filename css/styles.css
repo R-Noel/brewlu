@@ -20,7 +20,7 @@ span.line {
 
 .container {
     width: 100%;
-    height: 52vh;
+    height: 486px;
     position: absolute;
     opacity: .3;
     min-height: 484px;
@@ -98,14 +98,15 @@ span.line {
     padding: 15px 8px;
     min-width: 100%;
     width: 100%;
+    background: transparent;
     display: flex;
     flex: 0 0 100%;
     flex-direction: row;
     justify-content: space-between;
-    transition: ease-in 1s all;
+    transition: ease-in .5s all;
 }
 
-.top-bar #brewlu-logo {
+.top-bar #brewlulogo {
     margin: 14px 48px;
     opacity: 1;
     font-family: 'Comfortaa', sans-serif;
@@ -117,6 +118,7 @@ span.line {
     text-decoration: none white;
     order: 1;
     flex-shrink: 0;
+    transition: ease-in .5s all;
 }
 
 .top-bar #login {
@@ -133,6 +135,7 @@ span.line {
     color: white;
     text-decoration: none white;
     flex-shrink: 0;
+    transition: ease-in .5s all;
 }
 
 .bundle-ribbon {
@@ -387,7 +390,7 @@ section.plans .low-tier {
     border-radius: 4px;
     transition: ease-out .5s all;
     overflow: hidden;
-    max-height: 570px;
+    max-height: 584px;
 }
 
 .low-tier:hover {
