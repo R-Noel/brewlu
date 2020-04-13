@@ -762,4 +762,107 @@ footer.footer-ribbon #a {
         padding: 20px 0px 36px;
         text-align: center;
     }
+
+    section.picture-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        font-size: 0;
+    }
+
+    section.picture-grid .left {
+        grid-row: 1;
+        grid-column: 1;
+    }
+
+    section.picture-grid .left #caption {
+        left: 4px;
+        bottom: 15px;
+    }
+
+    section.picture-grid .middle-top {
+        grid-row: 1;
+        grid-column: 2;
+    }
+
+    section.picture-grid .middle-bottom {
+        grid-row: 2;
+        grid-column: 1 / 3;
+    }
+
+    section.picture-grid .right-bottom {
+        grid-row: 3;
+        grid-column: 1;
+    }
+
+    section.picture-grid .right-middle {
+        grid-row: 3;
+        grid-column: 2;
+    }
+
+    section.picture-grid .right-top {
+        grid-row: 4;
+        grid-column: 1 / 3;
+    }
+
+    section.plans {
+        margin: 0 auto;
+        grid-template-rows: auto auto auto auto;
+        grid-template-columns: auto;
+    }
+
+    section.plans #title {
+        grid-column: 1;
+    }
+
+    section.plans #description {
+        grid-column: 1;
+    }
+
+    section.plans .low-tier {
+        margin: 0 auto;
+        max-height: 606px;
+        grid-row: 3;
+    }
+
+    section.plans .high-tier {
+        max-height: 1050px;
+        grid-row: 4;
+        grid-column: 1;
+    }
+
+    section.free-trial {
+        grid-template-rows: auto auto;
+        grid-template-columns: auto;
+        text-align: center;
+    }
+
+    section.free-trial .photo {
+        padding: 40px 0;
+        grid-row: 2;
+        grid-column: 1;
+    }
+
+    section.free-trial .photo #photo1 {
+        height: 160px;
+        transform: translate( -70%, 20%);
+    }
+
+    section.free-trial .photo #photo2 {
+        height: 150px;
+        transform: translate( 0, 20%);
+    }
+
+    footer {
+        grid-template-rows: auto auto auto auto auto auto auto;
+        font-size: .8em;
+    }
+
+
+    footer #clickable {
+        font-size: .7em;
+    }
+
+    .footer-ribbon {
+        flex-wrap: wrap;
+    }
 }
