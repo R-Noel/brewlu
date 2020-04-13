@@ -772,9 +772,10 @@ footer.footer-ribbon #a {
         font-size: 0;
     }
 
-    section.picture-grid .left {
+    .picture-grid .left {
         grid-row: 1;
         grid-column: 1;
+        max-height: 350px;
     }
 
     section.picture-grid .left #caption {
