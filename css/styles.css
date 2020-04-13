@@ -674,7 +674,7 @@ footer.footer-ribbon #a {
 
 @media only screen and (max-width: 920px) {
     .intro {
-        min-height: 600px;
+        min-height: 640px;
         
     }
 
@@ -700,7 +700,7 @@ footer.footer-ribbon #a {
     }
 
     .bundle-ribbon {
-        transform: translate(0, 452px);
+        transform: translate(0, 500px);
     }
 
     .logos {
@@ -824,12 +824,12 @@ footer.footer-ribbon #a {
 
     section.plans .low-tier {
         margin: 0 auto;
-        max-height: 606px;
+        max-height: 634px;
         grid-row: 3;
     }
 
     section.plans .high-tier {
-        max-height: 1050px;
+        max-height: 1066px;
         grid-row: 4;
         grid-column: 1;
     }
