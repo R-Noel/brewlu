@@ -191,7 +191,7 @@ span.line {
 }
 
 .logos #bundle-details {
-    margin: -24px 0;
+    margin: 0px 0;
     font-family: 'Oswald', sans-serif;
     font-weight: 300;
     grid-row: 3;
